@@ -18,8 +18,6 @@ function MentalState(props) {
         setCount(count + 1)
     }
 
-
-    console.log(props.audio.audio[count].src)
     return (
         <div>
             <div className='home'>
@@ -28,7 +26,7 @@ function MentalState(props) {
 
             <h1>Current Mental State: {props.audio.state}</h1>
             <h4>Current Song: {props.audio.audio[count].title}</h4>
-            <audio controls autoplay='autoplay'>
+            <audio onEnded={handleNext} controls autoplay='autoplay'>
                 <source src={props.audio.audio[count].src} type="audio/mpeg"></source>
                 Audio is not supported in your web browser.
             </audio>
