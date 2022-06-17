@@ -2,6 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 function MentalState(props) {
+
+    console.log(props.audio)
+
     return (
         <div>
             <div className='home'>
