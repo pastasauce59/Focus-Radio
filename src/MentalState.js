@@ -26,8 +26,7 @@ function MentalState(props) {
 
             <h1>Current Mental State: {props.audio.state}</h1>
             <h4>Current Song: {props.audio.audio[count].title}</h4>
-            <audio onEnded={handleNext} controls autoplay='autoplay'>
-                <source src={props.audio.audio[count].src} type="audio/mpeg"></source>
+            <audio onEnded={handleNext} controls autoPlay='autoplay' src={props.audio.audio[count].src} type="audio/mpeg">
                 Audio is not supported in your web browser.
             </audio>
             <div className='prev-next-btns'>
